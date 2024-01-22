@@ -13,7 +13,7 @@ class Book(models.Model):
     author = models.CharField(max_length=255)
     publisher = models.CharField(max_length=255)
     published_date = models.DateField()
-    category = models.ForeignKey(Category, on_delete=PROTECT)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
     distribution_expense = models.FloatField()
     
     def __str__(self):
